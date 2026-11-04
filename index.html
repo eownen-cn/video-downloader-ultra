@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="local-token" content="__LOCAL_TOKEN__">
+  <title>三平台视频下载器 Ultra</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <main>
+    <h1>三平台视频下载器 <span class="badge">Ultra</span></h1>
+    <p class="muted">YouTube / X / TikTok</p>
+    <form id="search">
+      <label for="url" class="sr-only">原视频链接</label>
+      <input id="url" type="url" inputmode="url" autocomplete="off" spellcheck="false"
+        required maxlength="4096" placeholder="粘贴原视频链接">
+      <button type="submit">搜索</button>
+    </form>
+    <p class="muted">应用无痕模式已启用。平台仍可看到本次连接的出口 IP。</p>
+    <p id="status" role="status" aria-live="polite"></p>
+    <section id="results" aria-label="可下载格式"></section>
+  </main>
+  <footer>为维护原创视频创作者的合法利益，该网页仅供学习交流，禁止公开推广或商业化，违者后果自负。</footer>
+</body>
+</html>

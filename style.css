@@ -1,0 +1,51 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #000;
+  color: #fff;
+  color-scheme: dark;
+  font: 14px/1.6 Consolas, "Microsoft YaHei", monospace;
+}
+main { width: min(100% - 2rem, 44rem); margin: clamp(3rem, 16vh, 10rem) auto 2rem; flex: 1; }
+h1, h2, h3 { font-size: inherit; }
+h1, main > .muted, footer { text-align: center; }
+.muted, footer { color: #bcbcbc; }
+form { display: flex; gap: .5rem; margin-top: 1.25rem; }
+input, button {
+  font: inherit;
+  color: inherit;
+  background: #000;
+  border: 1px solid #888;
+  padding: .55rem .8rem;
+}
+input { flex: 1; min-width: 0; }
+button { cursor: pointer; white-space: nowrap; }
+button:disabled { cursor: wait; opacity: .55; }
+:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+#status { min-height: 1.6em; overflow-wrap: anywhere; }
+#status a { color: inherit; }
+.badge { display: inline-block; padding: 0 .45em; border: 1px solid #555; border-radius: .3em; color: #d0d0d0; }
+.search-progress, .download-progress { margin-top: .75rem; padding: .7rem .85rem; border-radius: .3rem; }
+.search-progress { color: #e0e0e0; background: rgb(255 255 255 / 30%); }
+.download-progress { background: #141414; border: 1px solid #414141; }
+.download-progress progress { width: calc(100% - 7em); height: .8rem; accent-color: #a6d9ff; }
+.download-progress span { display: inline-block; width: 7em; padding-left: .75em; }
+.download-progress p { margin: .45rem 0 0; color: #ddd; animation: progress-pulse 1.5s ease-in-out infinite alternate; }
+.download-progress.complete p { animation: none; }
+@keyframes progress-pulse { from { opacity: 1; } to { opacity: .48; } }
+@media (prefers-reduced-motion: reduce) { .download-progress p { animation: none; } }
+#results { overflow-wrap: anywhere; }
+ul { list-style: none; padding: 0; margin: 0; }
+li { border-top: 1px solid #444; }
+li button {
+  width: 100%;
+  text-align: left;
+  border: 0;
+  white-space: normal;
+  text-decoration: underline;
+}
+footer { padding: 1rem; border-top: 1px solid #444; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
